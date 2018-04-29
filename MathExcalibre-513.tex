@@ -1,0 +1,46 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Name: Arpon Basu,School: AECS-4,Mumbai-400094
+
+Solution for problem 513
+\end{center}
+
+  The characteristic equation of the recurrence given in (1) is 
+      \begin{center}
+	  $x^3-3x^2+3x-1=0$ \\
+	  $ \Rightarrow (x-1)^3=0$
+      \end{center}
+Thus by the theory of homogeneous linear recurrences we get that 
+   \begin{center}
+     $$ a_{n}=k_{1}\cdot 1^n + k_{2}\cdot n \cdot 1^n +  k_{3}\cdot n^2 \cdot 1^n $$
+     $$ =k_{1} + k_{2}\cdot n  +  k_{3} \cdot n^2 \qquad \forall n \ge 0 $$
+   \end{center}
+
+ 
+  Now by condition (2) we have 
+  $$2(k_{1} + k_{2}  +  k_{3})=(k_{1}) + (k_{1} + 2k_{2}  +  4k_{3})-2 \Rightarrow k_{3}=1 $$
+  $$\therefore  a_{n}=n^2 + (k_{2})n+k_{1}  $$
+  Now $k_{1}=a_{0} \in \mathbb{Z}$ and $a_{1}=1+k_{1}+k_{2} \in \mathbb{Z} \Rightarrow  k_{2} \in \mathbb{Z}$ that is both $k_{1},k_{2}$ are integers.\\
+  If $k_{2}^2 -4k_{1} \neq 0$ then \\
+  
+  $x^2 = a_{n}=n^2+k_{2}n+k_{1}$\\
+  $\Rightarrow 4x^2=4n^2+4k_{2}n+4k_{1}=(2n)^2+2\cdot2n\cdot k_{2}^2 + (4k_{1}-k_{2}^2 )$\\
+  $\Rightarrow (2x)^2=(2n+k_{2})^2+ (4k_{1}-k_{2}^2 )$\\
+  $\Rightarrow |(2x)^2-(2n+k_{2})^2|= |(k_{2}^2 - 4k_{1})|$\\
+  This equation can have atmost $\tau(|(k_{2}^2 - 4k_{1})|)$ solutions for $x$, where $\tau(n)$ is number of positive divisors of $n$.\\
+  But this contradicts condition (3) according to which $x^2=a_{n}$ can have arbitrarily large number of solutions.\\
+  $\therefore (k_{2}^2 - 4k_{1})=0$\\
+  $\Rightarrow k_{2}=2r;k_{1}=r^2 $ for some $r \in \mathbb{Z}$\\
+  $\therefore a_{n}=n^2+2rn+r^2=(n+r)^2$ is a perfect square for all $n$.\\
+  
+  \textbf{$\therefore$ Hence proved.}  
+    
+    
+\end{document}

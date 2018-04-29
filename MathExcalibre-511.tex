@@ -1,0 +1,66 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\begin{document}
+\begin{center}
+
+
+Arpon Basu,School: AECS-4,Mumbai-400094
+
+Solution for problem 511
+\end{center}
+
+   We claim that the minima is $94$ which is attained when $(x_{1},x_{2}, \cdots ,x_{40})=(\underbrace{1,1, \cdots 1,1}_{22},\underbrace{2,2 \cdots 2,2}_{18})$ .\\
+   If the minima occurs for some other tuplet where $r$ twos have become one and $k$ ones have increased , like 
+   $$ (\underbrace{1,1, \cdots 1,1}_{k},\underbrace{2,2 \cdots 2,2}_{r}) \longrightarrow (1+x_{1},1+x_{2}, \cdots 1+x_{k},\underbrace{1,1 \cdots 1,1}_{r})$$ 
+   where $x_{i}>0$ and $\sum_{i=1}^{k} x_{i} = r $ then: \\
+   Original sum$(S_{1})$ : $k\cdot 1^2 + r\cdot 2^2 = 4r+k$ \\
+   \\
+   Changed Sum$(S_{2})$: $\sum_{i=1}^{k} (1+x_{i})^2 + r\cdot 1^2=k+2 \sum_{i=1}^{k} x_{i} +\sum_{i=1}^{k} x_{i}^2 + r$\\
+   \\
+   
+   
+   
+   \begin{dmath}
+\therefore S_{2}-S_{1} =k+3r+ (\sum_{i=1}^{k} x_{i}^2) -4r - k 
+          = (\sum_{i=1}^{k} x_{i}^2) -r
+          =(\sum_{i=1}^{k} x_{i}^2) - (\sum_{i=1}^{k} x_{i}) 
+          \ge 0
+\end{dmath}
+   
+In the penultimate step we have replaced $r$ by $\sum_{i=1}^{k} x_{i}$.
+   
+   
+   
+   \begin{center}
+      \fbox{$\therefore 94$ is indeed the minima.}\\
+    \end{center}
+   
+   We claim that maxima is $400$ which is attained when $(x_{1},x_{2}, \cdots x_{40})=(\underbrace{1,1, \cdots 1,1}_{39},19)$ \\
+   If any other tuplet achieves maxima like
+   
+    $$ (1+x_{1},1+x_{2}, \cdots 1+x_{k},19-r)$$ where $\sum_{i=1}^{k} x_{i} = r $ and $r \le 18$ then: \\
+    
+    Original sum$(S_{1})$ : $k\cdot 1^2 + 19^2 = k+361$ \\
+    
+    Changed  Sum$(S_{2})$: $\sum_{i=1}^{k} (1+x_{i})^2 + (19-r)^2=k+ \sum_{i=1}^{k} x_{i}^2 + 2 \sum_{i=1}^{k} x_{i} + 361 + r^2 -38r$
+   
+    $\therefore  S_{2}-S_{1}=361+k+ \sum_{i=1}^{k} x_{i}^2 +r^2 -36r -361-k = \sum_{i=1}^{k} x_{i}^2 +r^2 -36r = \sum_{i=1}^{k} x_{i}^2 +(\sum_{i=1}^{k} x_{i})^2 - 36r < 2(\sum_{i=1}^{k} x_{i})^2 -36r=2r(r-18) \le 0$ \\
+
+    \begin{center}
+      \fbox{$\therefore 400$ is indeed the maxima.}\\
+    \end{center}
+
+    
+    
+    
+    \end{document}
+
+    
+ 
+
+$\therefore  S_{2}-S_{1}=k+3r+ (\sum_{i=1}^{k} x_{i}^2) -4r - k = (\sum_{i=1}^{k} x_{i}^2) -r = (\sum_{i=1}^{k} x_{i}^2) - (\sum_{i=1}^{k} x_{i}) \ge 0 $ \\
+   In the last step we replace $r$ by $\sum_{i=1}^{k} x_{i}$
+   

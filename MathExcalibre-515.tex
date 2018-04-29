@@ -1,0 +1,52 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+
+
+Arpon Basu,School: AECS-4,Mumbai-400094
+
+Solution for problem 515
+\end{center}
+
+  We will prove a stronger statement for $6$ real numbers satisfying the given conditions.\\
+Let $6$ given numbers be represented by $6$ vertices of a complete graph.The edges of the graph are then colored red if sum of their two end nodes
+is rational and blue if the product of their two end nodes is rational.In case if there are two real numbers such that both their sum and product is rational then we color corresponding edge as either red or
+blue as per our choice.Thus we get a two colored complete graph.According to Pigeon Hole Principle(PHP), there must either be a red or a blue triangle
+in this graph.\\
+If there is red triangle of numbers $a,b\quad \textrm{\&}\quad  c$ then \\
+
+\begin{center}
+$ a+b \in \mathbb{Q} , b+c \in \mathbb{Q} , c+a \in \mathbb{Q} $ \\
+$\Rightarrow (a+b)+(b+c)+(c+a)\in \mathbb{Q} $ \\
+$\Rightarrow (a+b+c)\in \mathbb{Q} $ \\
+$\Rightarrow a=(a+b+c)-(b+c)\in \mathbb{Q} $ \\  
+$\therefore a,b,c \in \mathbb{Q} $  
+\end{center}
+
+Now if $a/b/c$ adds up with some $x$ to give a rational then $x$ is rational.Similarly if $a/b/c$ mutiplies with some $x$ to give a 
+rational , then $x$ itself is rational(because $a,b,c \neq 0$).Thus a red triangle forces all the numbers to be rational and in that case
+conclusion is obvious.\\
+If $a,b,c$ form a blue traingle then \\
+$ab,bc,ca \in \mathbb{Q} $\\
+$\Rightarrow \frac{b}{a}, \frac{c}{a} \in \mathbb{Q} $ ( Note $a,b,c \neq 0$)\\
+$\Rightarrow b=r_{1}a,c=r_{2}a$ for some $r_{1},r_{2} \in \mathbb{Q}  -\{0,1\}$($r_{1},r_{2} \neq 0$ as $a,b,c$ are distinct)\\
+$\therefore ab=r_{1}a^2 \in \mathbb{Q} $\\
+$\Rightarrow a^2 \in \mathbb{Q} $\\
+$\Rightarrow a^2,b^2,c^2 \in \mathbb{Q} $\\
+Thus if the remaining three numbers multiply with $a,b,c$ to give rational number then we are done.Otherwise , some $x$ in additive relationship with 
+$a,b,c$ , that is , $a+x \in \mathbb{Q} ,b+x \in \mathbb{Q}  , c+x \in \mathbb{Q} $\\
+$\Rightarrow a+x \in \mathbb{Q} $\\
+$\Rightarrow r_{1}a+x \in \mathbb{Q}  $ \\
+$\Rightarrow (r_{1}-1)x \in \mathbb{Q}  $\\
+$\Rightarrow x\in \mathbb{Q} $ ($\because (r_{1}-1) \neq 0 $)\\
+Thus also in case of blue triangle, the conclusion follows.\\
+
+\textbf{For extending it to the problem statement we simply take two (overlapping) sets of $6$ real numbers whose union is $10$ real numbers}. 
+
+
+    
+\end{document}
